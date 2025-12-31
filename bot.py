@@ -12,8 +12,11 @@ from urllib.parse import urlencode
 # 🔐 Get bot token from environment variable
 BOT_TOKEN = os.environ.get("BOT_TOKEN")
 
-# 🌐 Your deployed website URL
-BASE_URL = "https://pathly-labs-insight.onrender.com"
+BASE_URL = os.getenv(
+    "BASE_URL",
+    "http://localhost:8000"
+)
+
 
 
 # ─────────────────────────────
